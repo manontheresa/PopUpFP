@@ -1,0 +1,154 @@
+:root { 
+    --fhict-color: #663366; 
+    --fhict-pink-color: #E40086; 
+    --main-font: "Pragmatica", "Helvetica", "Roboto", sans-serif; 
+    --main-font-size: 20px; 
+    --main-font-weight: 500; 
+    --body-font: "HelveticaNeue", sans-serif;
+    --body-font-size: 16px;
+    --popup-text-color: #fff; 
+    --hover-link: #e9e9e9; 
+    --spacing-left: 2.1em; 
+    --margin-btns: 1em; 
+    --text-line-height: 22px; 
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    font-family: var(--main-font);
+    font-weight: var(--main-font-weight); 
+    font-size: var(--main-font-size); 
+    overflow: hidden; 
+}
+
+/* Background Image */
+#background { 
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    width: 100vw; 
+    height: 100vh; 
+}
+
+#popup { 
+    width: 35em; 
+    height: 7em; 
+    background-color: var(--fhict-color);
+    position: absolute;
+    bottom: 3em; 
+    right: 0;
+    border-radius: 15px 0 0 15px;
+    padding: 30px; 
+}
+
+#popup h1, span, p { 
+    color: var(--popup-text-color); 
+    line-height: var(--text-line-height); 
+}
+
+#popup h1 { 
+    display: inline;
+}
+
+#popup #date { 
+    font-family: var(--main-font);
+    font-size: var(--body-font-size); 
+    color: var(--hover-link); 
+}
+
+#popup p { 
+    margin-top: 0.5em; 
+    font-family: var(--body-font);
+    font-size: var(--body-font-size); 
+    padding-left: var(--spacing-left); 
+}
+
+
+#popup .wave-emoji {
+    animation-name: wave-animation;  
+    animation-duration: 2.5s;        
+    animation-iteration-count: 3;  
+    transform-origin: 70% 70%;       
+    display: inline-block;
+  }
+
+  /* Buttons remove decoration */
+
+  .hrefBtn { 
+    text-decoration: none;
+    color: black; 
+}
+
+/* Button Contact Teacher */
+  #btnContact { 
+      margin: var(--margin-btns) var(--margin-btns) 0 var(--spacing-left);
+      padding: 0.8em 1.6em; 
+    background-color: var(--popup-text-color);
+    border: 0; 
+    font-size: var(--body-font-size);
+    cursor: pointer; 
+  }
+
+  /* Arrow Button */
+
+  .fa-chevron-right { 
+    font-size: 10px !important;
+    color: var(--fhict-pink-color); 
+    margin-left: var(--margin-btns); 
+  }
+
+ #btnContact:hover .fa-chevron-right{ 
+    position: relative;
+    animation: chevron-animation forwards; 
+    animation-duration: 0.5s;        
+    transform-origin: 0%; 
+  }
+
+
+
+  /* Button Remind me Later */
+
+  #spanText { 
+      font-size: var(--body-font-size); 
+      margin-right: var(--margin-btns); 
+  }
+
+  #dismissBtn { 
+      color: var(--popup-text-color); 
+      border-bottom: 2px solid var(--popup-text-color); 
+      font-size: var(--body-font-size);
+  }
+
+  #dismissBtn:hover { 
+    color: var(--hover-link); 
+  }
+
+  /* Close Btn */
+  .closeIcon { 
+      display: inline;  
+      float: right;
+      margin-right: var(--spacing-left); 
+      font-size: var(--body-font-size);
+      color: var(--popup-text-color); 
+      text-decoration: none;
+  }
+
+
+
+/* Wave Keyframe Animation */
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) } 
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* Animation Arrow */
+@keyframes chevron-animation { 
+    0% { left: 0; }
+   100% { left: 0.5em }
+}
